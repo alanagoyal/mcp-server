@@ -1,0 +1,7 @@
+.git
+.mastra
+blog
+memory.db*
+node_modules
+public
+.env*
