@@ -73,7 +73,7 @@ export const getCompanyMetadataTool = createTool({
       throw new Error(`company "${context.company}" not found in portfolio`);
     }
     return {
-      icon: companyData.icon,
+      icon: `http://localhost:4111${companyData.icon}`,
       description: companyData.description,
       url: companyData.url,
       status: companyData.status,

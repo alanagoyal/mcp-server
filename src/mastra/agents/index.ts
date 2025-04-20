@@ -1,5 +1,6 @@
 import { Agent } from '@mastra/core';
 import { openai } from '@ai-sdk/openai';
+import { Memory } from '@mastra/memory';
 import {
   howIWorkTool,
   whoIWorkWithTool,
@@ -46,6 +47,7 @@ export const basecaseAgent = new Agent({
       - and more via the tools
   `,
   model: openai('gpt-4o-mini'),
+  memory: new Memory(),
   tools: { 
     howIWork: howIWorkTool,
     whoIWorkWith: whoIWorkWithTool,
