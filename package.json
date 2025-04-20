@@ -1,5 +1,5 @@
 {
-  "name": "@alanagoyal/basecase-mcp",
+  "name": "@alanagoyal/mcp-server",
   "version": "1.0.0",
   "main": "src/mastra/tools/index.ts",
   "scripts": {
