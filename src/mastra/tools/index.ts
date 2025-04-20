@@ -62,7 +62,6 @@ export const getCompanyMetadataTool = createTool({
     company: z.string().describe('company name'),
   }),
   outputSchema: z.object({
-    icon: z.string(),
     description: z.string(),
     url: z.string(),
     status: z.string().nullable(),
@@ -73,7 +72,6 @@ export const getCompanyMetadataTool = createTool({
       throw new Error(`company "${context.company}" not found in portfolio`);
     }
     return {
-      icon: `http://localhost:4111${companyData.icon}`,
       description: companyData.description,
       url: companyData.url,
       status: companyData.status,
