@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mastra dev",
     "build": "tsc",
-    "prepare": "npm run build",
-    "build:mcp": "tsup src/mastra/stdio.ts --format esm --no-splitting --dts --treeshake && chmod +x dist/stdio.js"
+    "build:mcp": "tsup src/mastra/stdio.ts --format esm --no-splitting --dts && chmod +x dist/stdio.js"
   },
   "keywords": [
     "mastra",
