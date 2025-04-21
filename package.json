@@ -24,7 +24,7 @@
     "@mastra/core": "0.0.0-mcp-server-update-parse-20250421171139",
     "@mastra/mcp": "0.0.0-mcp-server-update-parse-20250421171139",
     "@mastra/memory": "0.0.0-mcp-server-update-parse-20250421171139",
-    "mastra": "^0.4.9",
+    "mastra": "0.0.0-mcp-server-update-parse-20250421171139",
     "zod": "^3.24.3"
   },
   "devDependencies": {
