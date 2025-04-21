@@ -35,6 +35,7 @@ export const howIWorkTool = createTool({
   outputSchema: z.object({
     howIWork: z.array(z.string()),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { howIWork };
   },
@@ -46,6 +47,7 @@ export const whoIWorkWithTool = createTool({
   outputSchema: z.object({
     whoIWorkWith: z.array(z.string()),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { whoIWorkWith };
   },
@@ -57,6 +59,7 @@ export const getPortfolioCompaniesTool = createTool({
   outputSchema: z.object({
     companies: z.array(z.string()),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     const companies = portfolio.map((company) => company.title);
     return { companies };
@@ -75,11 +78,12 @@ export const getCompanyMetadataTool = createTool({
     status: z.string().nullable(),
   }),
   execute: async ({ context }) => {
+    const companyName = context?.company ?? "";
     const companyData = portfolio.find(
-      (c) => c.title.toLowerCase() === context.company.toLowerCase()
+      (c) => c.title.toLowerCase() === companyName.toLowerCase()
     );
     if (!companyData) {
-      throw new Error(`company "${context.company}" not found in portfolio`);
+      throw new Error(`company "${companyName}" not found in portfolio`);
     }
     return {
       description: companyData.description,
@@ -103,6 +107,7 @@ export const getFounderAllQuotesTool = createTool({
       })
     ),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { quotes };
   },
@@ -121,6 +126,7 @@ export const getGitCommitHistoryTool = createTool({
       })
     ),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     try {
       const response = await fetch(
@@ -205,6 +211,7 @@ export const aboutMeTool = createTool({
       })
     ),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { aboutMe };
   },
@@ -222,6 +229,7 @@ export const quickLinksTool = createTool({
       })
     ),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { quickLinks };
   },
@@ -233,6 +241,7 @@ export const principlesTool = createTool({
   outputSchema: z.object({
     principles: z.array(z.string()),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { principles };
   },
@@ -251,6 +260,7 @@ export const bookmarksTool = createTool({
       })
     ),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { bookmarks };
   },
@@ -295,6 +305,7 @@ export const readingListTool = createTool({
       ),
     }),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { readingList };
   },
@@ -334,6 +345,7 @@ export const musicTool = createTool({
       ),
     }),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { music };
   },
@@ -366,6 +378,7 @@ export const inspirationTool = createTool({
       ),
     }),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { inspiration };
   },
@@ -401,6 +414,7 @@ export const favSpotsTool = createTool({
       }),
     }),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { favSpots };
   },
@@ -443,6 +457,7 @@ export const favProductsTool = createTool({
       ),
     }),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { favProducts };
   },
@@ -463,6 +478,7 @@ export const groceriesTool = createTool({
       }),
     }),
   }),
+  inputSchema: z.object({}),
   execute: async () => {
     return { groceries };
   },
