@@ -21,7 +21,7 @@ import {
 
 const server = new MCPServer({
   name: "alanagoyal",
-  version: "1.0.9",
+  version: "1.0.14",
   tools: { 
     howIWorkTool,
     whoIWorkWithTool,
