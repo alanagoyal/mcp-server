@@ -24,6 +24,8 @@
     "@mastra/core": "0.0.0-mcp-server-update-parse-20250421171139",
     "@mastra/mcp": "0.0.0-mcp-server-update-parse-20250421171139",
     "@mastra/memory": "0.0.0-mcp-server-update-parse-20250421171139",
+    "boxen": "^8.0.1",
+    "braintrust": "^0.0.199",
     "mastra": "0.0.0-mcp-server-update-parse-20250421171139",
     "zod": "^3.24.3"
   },
