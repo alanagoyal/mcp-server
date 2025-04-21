@@ -21,7 +21,7 @@ interface GitHubCommit {
 export const howIWorkTool = createTool({
   id: 'how-i-work',
   description: 'get a list of how i work',
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     howIWork: z.array(z.string()),
   }),
@@ -33,7 +33,7 @@ export const howIWorkTool = createTool({
 export const whoIWorkWithTool = createTool({
   id: 'who-i-work-with',
   description: 'get a list of people i work with',
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     whoIWorkWith: z.array(z.string()),
   }),
@@ -45,7 +45,7 @@ export const whoIWorkWithTool = createTool({
 export const getPortfolioCompaniesTool = createTool({
   id: 'get-portfolio-companies',
   description: 'get a list of all companies in the basecase portfolio',
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     companies: z.array(z.string()),
   }),
@@ -82,7 +82,7 @@ export const getCompanyMetadataTool = createTool({
 export const getFounderAllQuotesTool = createTool({
   id: 'get-founder-quotes',
   description: 'get quotes from founders in the basecase portfolio',
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     quotes: z.array(z.object({
       text: z.string(),
@@ -100,7 +100,7 @@ export const getFounderAllQuotesTool = createTool({
 export const getGitCommitHistoryTool = createTool({
   id: 'get-git-commit-history',
   description: 'fetch recent git commit history from github repositories',
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     commits: z.array(z.object({
       id: z.string(),
@@ -182,7 +182,7 @@ export const getGitCommitHistoryTool = createTool({
 export const aboutMeTool = createTool({
   id: 'about-me',
   description: "get information about alana's current and previous roles",
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     aboutMe: z.array(z.object({
       title: z.string(),
@@ -197,7 +197,7 @@ export const aboutMeTool = createTool({
 export const quickLinksTool = createTool({
   id: 'quick-links',
   description: "get alana's social media and contact information",
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     quickLinks: z.array(z.object({
       platform: z.string(),
@@ -213,7 +213,7 @@ export const quickLinksTool = createTool({
 export const principlesTool = createTool({
   id: 'principles',
   description: "get alana's guiding principles and values",
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     principles: z.array(z.string())
   }),
@@ -225,7 +225,7 @@ export const principlesTool = createTool({
 export const bookmarksTool = createTool({
   id: 'bookmarks',
   description: "get alana's favorite quotes and their sources",
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     bookmarks: z.array(z.object({
       quote: z.string(),
@@ -242,7 +242,7 @@ export const bookmarksTool = createTool({
 export const readingListTool = createTool({
   id: 'reading-list',
   description: "get alana's current, upcoming, and completed books",
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     readingList: z.object({
       currentlyReading: z.array(z.object({
@@ -279,7 +279,7 @@ export const readingListTool = createTool({
 export const musicTool = createTool({
   id: 'music',
   description: "get alana's music preferences by genre and current favorites",
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     music: z.object({
       currentFavorites: z.array(z.object({
@@ -311,7 +311,7 @@ export const musicTool = createTool({
 export const inspirationTool = createTool({
   id: 'inspiration',
   description: "get list of people, places, and things that inspire alana",
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     inspiration: z.object({
       people: z.array(z.object({
@@ -338,7 +338,7 @@ export const inspirationTool = createTool({
 export const favSpotsTool = createTool({
   id: 'fav-spots',
   description: "get alana's favorite restaurants and coffee shops in sf and nyc",
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     favSpots: z.object({
       sf: z.object({
@@ -367,7 +367,7 @@ export const favSpotsTool = createTool({
 export const favProductsTool = createTool({
   id: 'fav-products',
   description: "get alana's favorite products for development, productivity and other categories",
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     favProducts: z.object({
       development: z.array(z.object({
@@ -399,7 +399,7 @@ export const favProductsTool = createTool({
 export const groceriesTool = createTool({
   id: 'groceries',
   description: "get alana's favorite grocery items by category",
-  inputSchema: z.object({}),
+  inputSchema: z.object({}).optional(),
   outputSchema: z.object({
     groceries: z.object({
       favorites: z.object({
